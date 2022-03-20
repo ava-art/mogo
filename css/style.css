@@ -243,11 +243,14 @@ z-index: 1;
 }
 
 .section_header{
-
   width: 100%;
   max-width: 960px;
   text-align: center;
   margin: 0 auto 50px;
+}
+
+.section_header--martop{
+  margin-top: 30px;
 }
 
 .section_title{
@@ -438,4 +441,85 @@ width: 100%;
   bottom: -80px;
   right: 0;
   z-index: 1;
+}
+
+/*  We do */
+
+.wedo{
+  display: flex;
+
+}
+
+.wedo_item{
+  width: 50%;
+
+}
+
+.wedo_item img{
+  max-width: 570px;
+  left: 0;
+}
+
+/***   accordeon    ***/
+
+.accordeon_item{
+  border: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+
+.accordeon_header{
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordeon_header::after{
+  content: "";
+  display: block;
+  width: 17px;
+  height: 17px;
+  border-top: 3px solid #ccc;
+  border-right: 3px solid #ccc;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  z-index: 1;
+  transform: translateY(-70%) rotate(135deg);
+
+
+
+}
+
+.accordeon_header img{
+
+  margin: 15px;
+}
+
+.accordeon_item.active
+.accordeon_content {
+  display: block;
+}
+
+.accordeon_item.active
+.accordeon_header::after {
+  transform: translateY(-50%) rotate(-45deg);
+  margin-top:5px;
+}
+
+
+.accordeon_content{
+  padding: 15px 20px;
+  color: #a8a8a8;
+  display: none;
+
+    font-style: italic;
+    font-weight: 300;
+}
+
+.accordeon_title{
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: auto 0;
+
 }
