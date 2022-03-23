@@ -721,18 +721,22 @@ text-align: center;
 }
 
 .photo_block{
-  margin-right: -1px;
 
+  background: linear-gradient(to bottom,
+    #f38181,#fce38a);
   position: relative;
 }
 
 .photo_img{
-background: linear-gradient(to bottom,
-  #f38181,#fce38a);
-
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.photo_block:hover .photo_img img{
+
+
+.photo_block:hover .photo_img{
+
   opacity: 0.1;
 }
 
@@ -774,12 +778,14 @@ background: linear-gradient(to bottom,
 
 .clients{
 display:flex;
+flex-wrap: wrap;
 padding-bottom: 40px;
 
 }
 
 .clients_item{
     width: 50%;
+    
 }
 
 .clients_inner{
@@ -812,6 +818,7 @@ padding-bottom: 40px;
   display: block;
   height: 3px;
   width: 60px;
+
   background-color: #f38181;
   margin: 6px auto 10px 0;
 }
@@ -835,6 +842,12 @@ padding-bottom: 40px;
 .news_item{
   width: 30%;
   position: relative;
+}
+
+.news_photo{
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .news_date{
@@ -928,6 +941,13 @@ color: #fff;
 
 .footer_instagram{
   width: 20%;
+}
+
+.inst_photo{
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-right: 15px;
 }
 
 .followers{
