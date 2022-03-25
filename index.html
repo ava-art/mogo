@@ -7,6 +7,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family
           =Montserrat:wght@300i;400;700&family=Roboto&display=swap"
           rel="stylesheet">
+          <link rel="stylesheet" type="text/css" href="https//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
 <script src="https://kit.fontawesome.com/24571c1acd.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -14,25 +16,36 @@
   </head>
   <body>
 
-    <header class="header">
+    <header class="header active" id="header">
       <div class="container">
         <div class="header_inner">
-          <div class="header_logo">MoGo</div>
+          <div class="header_logo" id="header_logo" data-scroll="#intro">MoGo</div>
 
-            <nav class="nav">
-              <a class="nav_link active" href="#">About</a>
-              <a class="nav_link" href="#">Servce</a>
-              <a class="nav_link" href="#">Work</a>
-              <a class="nav_link" href="#">Blog</a>
-              <a class="nav_link" href="#">Contact</a>
-
+            <nav class="nav" id="nav">
+              <a class="nav_link" href="#"
+              data-scroll="#about">About</a>
+              <a class="nav_link" href="#"
+              data-scroll="#service">Servce</a>
+              <a class="nav_link" href="#"
+              data-scroll="#work">Work</a>
+              <a class="nav_link" href="#"
+              data-scroll="#blog">Blog</a>
+              <a class="nav_link" href="#"
+              data-scroll="#contact">Contact</a>
             </nav>
+
+            <div class="nav_toggle" id="nav_toggle">
+              <span class="nav_toggle_item tog_one"></span>
+              <span class="nav_toggle_item tog_two"></span>
+              <span class="nav_toggle_item tog_three"></span>
+            </div>
 
       </div>
     </div>
   </header>
 
-      <div class="intro">
+<!-- Intro -->
+<div class="intro" id="intro">
         <div class="container">
           <div class="intro_inner">
             <h2 class="intro_suptitle">Creative Template</h2>
@@ -61,11 +74,11 @@
       </div>
 
 
-    <div class="page">
+<div class="page">
 
 
-
-      <section class="section">
+<!-- About -->
+<section class="section" id="about">
         <div class="container">
           <div class="section_header">
             <h3 class="section_suptilte">What we do</h3>
@@ -108,10 +121,11 @@
             </div>
           </div>
         </div>
-      </div>
-      </section>
+    </div>
+</section>
 
-      <div class="statistics">
+<!-- Statistic -->
+<div class="statistics">
         <div class="container">
          <div class="stat">
            <div class="stat_item">
@@ -138,7 +152,8 @@
        </div>
       </div>
 
-      <section class="section">
+<!-- Services deices -->
+<section class="section">
         <div class="container">
           <div class="section_header services_header">
             <h3 class="section_suptilte">We work with</h3>
@@ -187,12 +202,11 @@
                adipiscing elit, sed do eiusmod tempor.</div>
              </div>
           </div>
-        </div> <!-- container-->
-    </section>
+      </div> <!-- container-->
+</section>
 
-
-
-    <section class="section section--devices">
+<!-- Deices  -->
+<section class="section section--devices">
       <div class="container">
         <div class="section_header services_header">
           <h3 class="section_suptilte">For all devices</h3>
@@ -206,8 +220,8 @@
       </div>
     </section>
 
-
-    <section class="section">
+<!-- Service -->
+<section class="section" id="service">
       <div class="container">
         <div class="section_header section_header--martop">
           <h3 class="section_suptilte">Service</h3>
@@ -227,14 +241,14 @@
           </div>
           <div class="wedo_item">
             <div class="accordeon">
-              <div class="accordeon_item active">
-                <div class="accordeon_header">
+              <div class="accordeon_item active" data-collapse="#wedo_1">
+                <div class="accordeon_header" >
                   <img src="img/icon/6.jpg" alt="">
                   <div class="accordeon_title">
                     Photography
                   </div>
                 </div>
-                <div class="accordeon_content">
+                <div class="accordeon_content" id="wedo_1">
                   Lorem ipsum dolor sit amet, consectetur adipiscing
                    elit, sed do eiusmod tempor incididunt ut labore et
                    dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -243,14 +257,14 @@
                 </div>
               </div>
 
-              <div class="accordeon_item">
-                <div class="accordeon_header">
+              <div class="accordeon_item" data-collapse="#wedo_2">
+                <div class="accordeon_header" >
                   <img src="img/icon/3.jpg" alt="">
                   <div class="accordeon_title">
                     creativity
                   </div>
                 </div>
-                <div class="accordeon_content">
+                <div class="accordeon_content" id="wedo_2">
                   Lorem ipsum dolor sit amet, consectetur adipiscing
                    elit, sed do eiusmod tempor incididunt ut labore et
                    dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -259,14 +273,14 @@
                 </div>
               </div>
 
-              <div class="accordeon_item">
-                <div class="accordeon_header">
+              <div class="accordeon_item" data-collapse="#wedo_3">
+                <div class="accordeon_header" >
                   <img src="img/icon/4.jpg" alt="">
                   <div class="accordeon_title">
                     web design
                   </div>
                 </div>
-                <div class="accordeon_content">
+                <div class="accordeon_content" id="wedo_3">
                   Lorem ipsum dolor sit amet, consectetur adipiscing
                    elit, sed do eiusmod tempor incididunt ut labore et
                    dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -280,27 +294,30 @@
       </div>
     </section>
 
-
-    <div class="section section--background">
+<!-- Reviews -->
+<div class="section section--background">
       <div class="container">
         <div class="reviews">
-          <div class="reviews_item">
-            <img src="img/quote.png" alt="">
-            <div class="reviews_text">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-              <div class="reviews_name">
-                Jon Doe
+
+          
+            <div class="reviews_item">
+              <img src="img/quote.png" alt="">
+              <div class="reviews_text">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                <div class="reviews_name">
+                  Jon Doe
+                </div>
               </div>
             </div>
-          </div>
+
         </div>
       </div>
     </div>
 
-
-    <section class="section">
+<!-- Card -->
+<section class="section">
       <div class="container">
         <div class="section_header">
           <h3 class="section_suptilte">What we do</h3>
@@ -409,8 +426,8 @@
       </div> <!-- container -->
     </section>
 
-
-    <section class="section section--logos">
+<!-- Logos  -->
+<section class="section section--logos">
       <div class="container">
         <div class="logos">
           <img class="logo logo--adaptiv" src="img/logos/1.jpg" alt="">
@@ -423,8 +440,8 @@
       </div>
     </section>
 
-
-    <section class="section">
+<!-- We do  -->
+<section class="section">
       <div class="container">
         <div class="section_header">
           <h3 class="section_suptilte">What we do</h3>
@@ -440,12 +457,9 @@
         </div>
       </div>
 
-
-
-
-    <div class="photo">
-    <div class="photo_bg">
-
+<!-- Works  -->
+<div class="photo"  id="work">
+      <div class="photo_bg">
         <div class="photo_one_block">
           <div class="photo_block">
 
@@ -570,17 +584,13 @@
             <div class="photo_inner_suptext">
               Loren ipsum dolor on
             </div>
-
           </div>
         </div>
       </div>
-
     </div>
-    </div> <!-- Photo -->
-  </section>
+</div> <!-- Photo -->
 
-
-
+<!-- Reviews 2  -->
 <div class="section">
   <div class="container">
     <div class="reviews">
@@ -599,7 +609,7 @@
   </div>
 </div>
 
-
+<!-- Clients  -->
 <section class="section section--happy_clients">
   <div class="container">
     <div class="section_headr section_headr--happy_clients">
@@ -672,8 +682,8 @@
   </div>
 </section>
 
-
-<section class="section">
+<!-- Blog  -->
+<section class="section" id="blog">
   <div class="container">
     <div class="section_header">
       <h3 class="section_suptilte">Our stories</h3>
@@ -793,12 +803,12 @@
   </div>
 </section>
 
-
+<!-- Map  -->
 <div class="section section--map">
 </div>
 
-
-<section class="section section--background">
+<!-- Footer  -->
+<section class="section section--background" id="contact">
   <div class="container">
     <div class="footer">
 
@@ -908,7 +918,10 @@
 </div>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+<script src="js/app.js"></script>
 
 
   </body>
